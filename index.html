@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio | Vlada Ivaniv</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta description and keywords for SEO -->
+    <meta name="description" content="Portfolio of Vlada Ivaniv, showcasing works in design and creative projects. Learn more about her design philosophy and explore recent projects.">
+    <meta name="keywords" content="Vlada Ivaniv, design portfolio, creative projects, graphic design, web design, about me, projects">
+    <!-- preload google font-->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <style>
+        @font-face {
+            font-family: 'Bespoke Stencil';
+            src: url('./fonts/Bespoke Stencil/static/OTF/BespokeStencil-Bold.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        /**
+        @font-face {
+            font-family: 'Shadow Hand';
+            src: url('./fonts/ShadowHand/static/TTF/ShadowHand.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }**/
+        </style>
+    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-responsive.css">
+    <!-- CSS Styles -->
+</head>
+
+<body class="text-uppercase">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="initials-container">
+            <div class="initials">V</div>
+            <div class="loading-number">
+                <div class="loading-numbers">
+                    <span id="current-number">00</span> / <span id="max-number">10</span>
+                </div>
+                <div class="loading-text">LOADING<span class="dots"><span>.</span><span>.</span><span>.</span></span></div>
+            </div>
+            <div class="initials">I</div>
+        </div>
+        <div class="profession-text"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">VI</div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" tabindex="-1" aria-hidden="true" />
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>        
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="parallax">
+            <h1><span>Vlada Ivaniv</span><br /> Digital Designer</h1>
+            <blockquote>
+                <p>"Design is not just what it looks like and feels like. Design is how it works."</p>
+            </blockquote>
+        </section>
+
+        <!-- Scroll Button -->
+        <a href="#about" id="scroll-btn" class="scroll-btn" aria-label="Scroll to About Me section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+        </a>
+
+        <section id="phrases" class="parallax">
+            <div class="bg"></div>
+            <p id="animatedText" class="white-space-pre-line">I specialize in creating <strong>immersive digital experiences</strong> that blend aesthetics with functionality, helping brands connect with their audience on a deeper level.<br />
+                If you're ready to transform your brand or bring a fresh perspective to your project, let's create something truly exceptional together.</p>
+            <div class="actions-container">
+                <a href="#about" class = "btn-action-1" >Explore</a>
+                <a href="#contact" class = "btn-action-2" >Contact Me</a>
+            </div>
+        </section>
+
+        
+
+        <!-- Projects Section -->
+        <section class="parallax" id="projects">
+            <div class="bg"></div>
+            <div class="show-first">
+                <h2>Projects</h2>
+                <h3>Recent Works</h3>
+                <p>The first images showcase some of my Instagram Stories designs, highlighting my creativity in social media content. Below are some of the projects I've worked on recently. Scroll down to see more.</p>
+            </div>
+            <!-- iPhone Container -->
+            <div class="show-second iphone-container" id="projectes-histories-iphone">
+                <div class="iphone-frame">
+                    <!-- iPhone Screen -->
+                    <div class="iphone-screen">
+                        <div class="image-container">
+                            <!-- images -->
+                            <img src="img/histories/1.png" alt="Instagram Story 1" class="project-image">
+                            <img src="img/histories/2.png" alt="Instagram Story 2" class="project-image">
+                            <img src="img/histories/3.png" alt="Instagram Story 3" class="project-image">
+                            <img src="img/histories/4.png" alt="Instagram Story 4" class="project-image">
+                            <img src="img/histories/5.png" alt="Instagram Story 5" class="project-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="story-marketing-text">
+                    <p class="h2">Projects</p>
+                    <h3>Instagram Stories in Marketing</h3>
+                    <p>Instagram Stories create urgency, boost engagement, and drive conversions through quick, interactive content. Ideal for time-sensitive offers and promotions, they're essential for connecting with audiences in real-time.</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- About Section -->
+        <section class="parallax" id="about">
+            <div class="bg"></div>
+            <h2>About Me</h2>
+            <h3>My Background</h3>
+            <p>I am a creative designer with a passion for digital and graphic design. I enjoy working on projects that challenge my creativity and allow me to explore new design concepts.</p>
+        </section>
+
+        
+
+        <!-- Contact Section -->
+        <section class="parallax" id="contact">
+            <div class="bg"></div>
+            <h2>Contact</h2>
+            <h3>Get In Touch</h3>
+            <p>If you'd like to collaborate or have any questions, feel free to reach out through email or my social media profiles.</p>
+            <form novalidate>
+                <!-- Nombre -->
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <div class="input-group has-validation">
+                    <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+                    <div class="invalid-feedback">
+                      Por favor ingresa tu nombre.
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Correo Electrónico -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo Electrónico</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">@</span>
+                    <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
+                    <div class="invalid-feedback">
+                      Por favor ingresa un correo electrónico válido.
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Asunto -->
+                <div class="mb-3">
+                  <label for="asunto" class="form-label">Asunto</label>
+                  <div class="input-group has-validation">
+                    <input type="text" class="form-control" id="asunto" placeholder="Asunto" required>
+                    <div class="invalid-feedback">
+                      Por favor ingresa el asunto del mensaje.
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Mensaje -->
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Deja tu mensaje aquí" id="mensaje" style="height: 150px" required></textarea>
+                    <label for="mensaje">Mensaje</label>
+                    <div class="invalid-feedback">
+                      Por favor ingresa un mensaje.
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Botón de Envío -->
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vlada Ivaniv. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap JS -->
+    <script src="css/bootstrap/js/bootstrap.min.js" defer></script>
+    <!-- GSAP Library (defer for better performance) -->
+    <script src="js/gsap/gsap.min.js" defer></script>
+    <!-- GSAP ScrollTrigger Plugin (defer for better performance) -->
+    <script src="js/gsap/ScrollTrigger.min.js" defer></script>
+    <!-- P5JS -->
+    <script src="js/p5/p5.min.js" defer></script>
+    <script src="js/p5.js" defer></script>
+    <!-- P5JS E -->
+    <!-- Custom JS -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
