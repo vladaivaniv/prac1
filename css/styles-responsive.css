@@ -1,0 +1,439 @@
+/* Media Queries Responsivas */
+
+/* Estilos para pantallas de hasta 1200px */
+@media (max-width: 1200px) {
+    :root {
+        /* Tamaños de fuente */
+        --font-size-header: 0.95rem;
+        --font-size-paragraph: 1.4rem;
+        --font-size-base: 2.8rem;
+        --font-size-large: 4.5rem;
+        --font-size-xlarge: 10rem;
+        --font-size-phrases-p: 1.8rem;
+
+        /* Espaciado */
+        --padding-section: 80px 40px;
+        --padding-nav: 0px 40px;
+    }
+
+    body {
+        font-size: var(--font-size-base);
+    }
+
+    nav .logo {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 25px;
+    }
+
+
+    .nav-toggle-label {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        z-index: var(--z-index-100);
+    }
+
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        display: block;
+        background-color: var(--color-nav-text);
+        height: 3px;
+        width: 100%;
+        border-radius: 2px;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-toggle-label span {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav-toggle-label span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .nav-toggle-label span::after {
+        content: '';
+        top: 8px;
+    }
+
+    /* Ocultar el menú de navegación por defecto */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    /* Mostrar el menú cuando el checkbox está marcado */
+    .nav-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    /* Animación del ícono de menú */
+    .nav-toggle:checked + .nav-toggle-label span {
+        background: transparent;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+}
+
+/* Estilos para pantallas de hasta 992px */
+@media (max-width: 992px) {
+    :root {
+        --font-size-header: 0.9rem;
+        --font-size-paragraph: 1.2rem;
+        --font-size-base: 2.5rem;
+        --font-size-large: 4rem;
+        --font-size-xlarge: 8rem;
+        --font-size-phrases-p: 1.6rem;
+
+        --padding-section: 60px 30px;
+        --padding-nav: 0px 30px;
+        --gap-nav: 20px;
+    }
+
+    header {
+        padding: var(--padding-nav);
+    }
+
+    nav ul {
+        gap: var(--gap-nav);
+    }
+
+    #home .intro-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #home .home-image {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    section h1,
+    section h2,
+    section .h2 {
+        font-size: var(--font-size-large);
+    }
+
+    .scroll-btn {
+        bottom: 20px;
+    }
+}
+
+/* Estilos para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    :root {
+        --font-size-header: 0.85rem;
+        --font-size-paragraph: 1.1rem;
+        --font-size-base: 2rem;
+        --font-size-large: 3.5rem;
+        --font-size-xlarge: 6rem;
+        --font-size-phrases-p: 1.4rem;
+
+        --padding-section: 50px 20px;
+        --padding-nav: 0px 20px;
+        --gap-nav: 15px;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+
+    /* Ajustes para el menú de navegación en móviles */
+    nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--padding-nav);
+        position: relative;
+    }
+
+    nav .logo {
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        display: none; /* Oculta el menú por defecto */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    
+
+    /* Ajustes para los enlaces del menú desplegable */
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        padding: 10px;
+        width: 100%;
+        display: block;
+    }
+
+    /* Ajustes adicionales */
+    #home h1 {
+        font-size: var(--font-size-xlarge);
+    }
+
+    #home h1 span {
+        font-size: var(--font-size-large);
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .scroll-btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .scroll-btn svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Ajustes para la pantalla de carga en dispositivos móviles */
+    #loading-screen {
+        padding: 20px;
+    }
+
+    #loading-screen .initials {
+        font-size: 6rem;
+        margin: 0 20px;
+    }
+
+    #loading-screen .profession-text {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #loading-screen .loading-number {
+        font-size: 3rem;
+        margin-top: 20px;
+    }
+
+    #loading-screen .loading-text {
+        font-size: 1.2rem;
+        margin-top: 15px;
+    }
+
+    .initials-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .dots {
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos para pantallas de hasta 480px */
+@media (max-width: 480px) {
+    :root {
+        --font-size-header: 0.8rem;
+        --font-size-paragraph: 1rem;
+        --font-size-base: 1.8rem;
+        --font-size-large: 3rem;
+        --font-size-xlarge: 5rem;
+        --font-size-phrases-p: 1.2rem;
+
+        --padding-section: 40px 15px;
+        --padding-nav: 0px 15px;
+        --gap-nav: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem;
+    }
+
+    #home .home-image {
+        max-width: 100%;
+    }
+
+    section p {
+        font-size: var(--font-size-paragraph);
+        padding: 0 10px;
+    }
+
+    .scroll-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .scroll-btn svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .actions-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .actions-container a {
+        width: 100%;
+    }
+
+    #projects .iphone-frame {
+        width: 250px;
+        height: 450px;
+    }
+
+    #projects .iphone-frame::before {
+        top: -18px;
+        width: 40px;
+        height: 4px;
+    }
+
+    /* Ajustes adicionales para la pantalla de carga en móviles */
+    #loading-screen {
+        padding: 15px;
+    }
+
+    #loading-screen .initials {
+        font-size: 5rem;
+        margin: 0 10px;
+    }
+
+    #loading-screen .profession-text {
+        font-size: 1.2rem;
+    }
+
+    #loading-screen .loading-number {
+        font-size: 2.5rem;
+        margin-top: 15px;
+    }
+
+    #loading-screen .loading-text {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .dots {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para pantallas de hasta 360px */
+@media (max-width: 360px) {
+
+    #loading-screen .initials {
+        font-size: 4.5rem;
+    }
+
+    #loading-screen .profession-text {
+        font-size: 1.2rem;
+    }
+
+    #loading-screen .loading-number {
+        font-size: 2rem;
+    }
+
+    #loading-screen .loading-text {
+        font-size: 0.9rem;
+    }
+
+    .dots {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para pantallas de hasta 320px */
+@media (max-width: 320px) {
+    :root {
+        --font-size-header: 0.75rem;
+        --font-size-paragraph: 0.9rem;
+        --font-size-base: 1.5rem;
+        --font-size-large: 2.5rem;
+        --font-size-xlarge: 4rem;
+        --font-size-phrases-p: 1rem;
+
+        --padding-section: 30px 10px;
+        --padding-nav: 0px 10px;
+        --gap-nav: 8px;
+    }
+
+
+
+    #home h1 {
+        font-size: var(--font-size-large);
+    }
+
+    #home h1 span {
+        font-size: var(--font-size-base);
+    }
+
+    nav .logo {
+        font-size: 1.2rem;
+    }
+
+    /* Ajustes para la pantalla de carga en pantallas pequeñas */
+    #loading-screen {
+        padding: 10px;
+    }
+
+    #loading-screen .initials {
+        font-size: 4rem;
+    }
+
+    #loading-screen .profession-text {
+        font-size: 1rem;
+    }
+
+    #loading-screen .loading-number {
+        font-size: 2rem;
+    }
+
+    #loading-screen .loading-text {
+        font-size: 0.9rem;
+    }
+
+    .dots {
+        font-size: 0.9rem;
+    }
+}
